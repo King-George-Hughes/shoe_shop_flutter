@@ -8,7 +8,7 @@ class Cart extends ChangeNotifier {
     Shoe(
       name: 'Air Jordan',
       price: '236',
-      imagePath: 'images/1.jpg',
+      imagePath: 'images/4.jpg',
       description: 'The forward-thinking design of his latest signature shoe.',
     ),
     Shoe(
@@ -26,7 +26,7 @@ class Cart extends ChangeNotifier {
     Shoe(
       name: 'Kyrie 6',
       price: '190',
-      imagePath: 'images/4.jpg',
+      imagePath: 'images/1.jpg',
       description: 'The forward-thinking design of his latest signature shoe.',
     ),
   ];

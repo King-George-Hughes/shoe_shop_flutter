@@ -26,10 +26,13 @@ class ShoeTile extends StatelessWidget {
           ),
 
           // Description
-          Text(
-            shoe.description,
-            style: GoogleFonts.sourceSansPro(
-              color: Colors.grey.shade600,
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20.0),
+            child: Text(
+              shoe.description,
+              style: GoogleFonts.sourceSansPro(
+                color: Colors.grey.shade600,
+              ),
             ),
           ),
 
