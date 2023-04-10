@@ -3,9 +3,11 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:shoe_shop/models/shoe.dart';
 
 class ShoeTile extends StatelessWidget {
-  ShoeTile({Key? key, required this.shoe}) : super(key: key);
+  ShoeTile({Key? key, required this.shoe, required this.onTap})
+      : super(key: key);
 
   Shoe shoe;
+  void Function()? onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -72,18 +74,21 @@ class ShoeTile extends StatelessWidget {
                 ),
 
                 // Button to add to cart
-                Container(
-                  padding: const EdgeInsets.all(20.0),
-                  decoration: const BoxDecoration(
-                    color: Colors.black,
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(12),
-                      bottomRight: Radius.circular(12.0),
+                GestureDetector(
+                  onTap: onTap,
+                  child: Container(
+                    padding: const EdgeInsets.all(20.0),
+                    decoration: const BoxDecoration(
+                      color: Colors.black,
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(12),
+                        bottomRight: Radius.circular(12.0),
+                      ),
                     ),
-                  ),
-                  child: const Icon(
-                    Icons.add,
-                    color: Colors.white,
+                    child: const Icon(
+                      Icons.add,
+                      color: Colors.white,
+                    ),
                   ),
                 ),
               ],
